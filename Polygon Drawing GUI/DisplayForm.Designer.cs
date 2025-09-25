@@ -1,4 +1,6 @@
-﻿namespace Polygon_Drawing_GUI
+﻿using static Polygon;
+
+namespace Polygon_Drawing_GUI
 {
     partial class DisplayForm
     {
@@ -6,6 +8,8 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+       
 
         /// <summary>
         /// Clean up any resources being used.
@@ -43,21 +47,21 @@
             ExteriorAngleSumLabel = new Label();
             CoordinatesLabel = new Label();
             PolygonLabel = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            label1 = new Label();
+            RadiusOut = new TextBox();
+            DiamaterOut = new TextBox();
+            ApothemOut = new TextBox();
+            SidesOut = new TextBox();
+            SideLengthOut = new TextBox();
+            DiagonalsOut = new TextBox();
+            AreaOut = new TextBox();
+            PerimiterOut = new TextBox();
+            SegmentOut = new TextBox();
+            InAngleOut = new TextBox();
+            ExAngleOut = new TextBox();
+            InteriorSumOut = new TextBox();
+            ExteriorSumOut = new TextBox();
+            CoordinatesOut = new TextBox();
+            DescriptionLabel = new Label();
             NameLabel = new Label();
             NameTextBox = new TextBox();
             RegenerateButton = new Button();
@@ -68,23 +72,21 @@
             // 
             DiamaterLabel.AutoSize = true;
             DiamaterLabel.Font = new Font("Segoe UI", 12F);
-            DiamaterLabel.Location = new Point(12, 205);
+            DiamaterLabel.Location = new Point(12, 301);
             DiamaterLabel.Name = "DiamaterLabel";
-            DiamaterLabel.Size = new Size(111, 32);
+            DiamaterLabel.Size = new Size(112, 32);
             DiamaterLabel.TabIndex = 1;
-            DiamaterLabel.Text = "Diamater";
-            DiamaterLabel.Click += this.DiamaterLabel_Click;
+            DiamaterLabel.Text = "Diameter";
             // 
             // RadiusLabel
             // 
             RadiusLabel.AutoSize = true;
             RadiusLabel.Font = new Font("Segoe UI", 12F);
-            RadiusLabel.Location = new Point(12, 301);
+            RadiusLabel.Location = new Point(12, 205);
             RadiusLabel.Name = "RadiusLabel";
             RadiusLabel.Size = new Size(84, 32);
             RadiusLabel.TabIndex = 2;
             RadiusLabel.Text = "Radius";
-            RadiusLabel.Click += this.RadiusLabel_Click;
             // 
             // ApothemLabel
             // 
@@ -95,7 +97,6 @@
             ApothemLabel.Size = new Size(113, 32);
             ApothemLabel.TabIndex = 3;
             ApothemLabel.Text = "Apothem";
-            ApothemLabel.Click += this.ApothemLabel_Click;
             // 
             // SidesLabel
             // 
@@ -106,7 +107,6 @@
             SidesLabel.Size = new Size(70, 32);
             SidesLabel.TabIndex = 4;
             SidesLabel.Text = "Sides";
-            SidesLabel.Click += this.SidesLabel_Click;
             // 
             // SideLengthLabel
             // 
@@ -117,7 +117,6 @@
             SideLengthLabel.Size = new Size(141, 32);
             SideLengthLabel.TabIndex = 5;
             SideLengthLabel.Text = "Side Length";
-            SideLengthLabel.Click += this.SideLengthLabel_Click;
             // 
             // DiagonalsLabel
             // 
@@ -128,29 +127,26 @@
             DiagonalsLabel.Size = new Size(119, 32);
             DiagonalsLabel.TabIndex = 6;
             DiagonalsLabel.Text = "Diagonals";
-            DiagonalsLabel.Click += this.DiagonalsLabel_Click;
             // 
             // PerimiterLabel
             // 
             PerimiterLabel.AutoSize = true;
             PerimiterLabel.Font = new Font("Segoe UI", 12F);
-            PerimiterLabel.Location = new Point(361, 205);
+            PerimiterLabel.Location = new Point(361, 301);
             PerimiterLabel.Name = "PerimiterLabel";
             PerimiterLabel.Size = new Size(109, 32);
             PerimiterLabel.TabIndex = 7;
             PerimiterLabel.Text = "Perimiter";
-            PerimiterLabel.Click += this.PerimiterLabel_Click;
             // 
             // AreaLabel
             // 
             AreaLabel.AutoSize = true;
             AreaLabel.Font = new Font("Segoe UI", 12F);
-            AreaLabel.Location = new Point(361, 301);
+            AreaLabel.Location = new Point(361, 205);
             AreaLabel.Name = "AreaLabel";
             AreaLabel.Size = new Size(62, 32);
             AreaLabel.TabIndex = 8;
             AreaLabel.Text = "Area";
-            AreaLabel.Click += this.AreaLabel_Click;
             // 
             // TriangleAreaLabel
             // 
@@ -161,7 +157,6 @@
             TriangleAreaLabel.Size = new Size(110, 32);
             TriangleAreaLabel.TabIndex = 9;
             TriangleAreaLabel.Text = "Segment";
-            TriangleAreaLabel.Click += this.TriangleAreaLabel_Click;
             // 
             // InternalAngleLabel
             // 
@@ -182,7 +177,6 @@
             ExternalAngleLabel.Size = new Size(167, 32);
             ExternalAngleLabel.TabIndex = 11;
             ExternalAngleLabel.Text = "External Angle";
-            ExternalAngleLabel.Click += this.ExternalAngleLabel_Click;
             // 
             // InteriorAngleSumLabel
             // 
@@ -193,7 +187,6 @@
             InteriorAngleSumLabel.Size = new Size(146, 32);
             InteriorAngleSumLabel.TabIndex = 12;
             InteriorAngleSumLabel.Text = "Interior Sum";
-            InteriorAngleSumLabel.Click += this.InteriorAngleSumLabel_Click;
             // 
             // ExteriorAngleSumLabel
             // 
@@ -214,7 +207,6 @@
             CoordinatesLabel.Size = new Size(165, 38);
             CoordinatesLabel.TabIndex = 14;
             CoordinatesLabel.Text = "Coordinates";
-            CoordinatesLabel.Click += this.CoordinatesLabel_Click;
             // 
             // PolygonLabel
             // 
@@ -225,148 +217,161 @@
             PolygonLabel.Size = new Size(220, 48);
             PolygonLabel.TabIndex = 15;
             PolygonLabel.Text = "Polygon Info";
-            PolygonLabel.Click += this.PolygonLabel_Click;
             // 
-            // textBox1
+            // RadiusOut
             // 
-            textBox1.Font = new Font("Segoe UI", 14F);
-            textBox1.Location = new Point(12, 240);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(150, 45);
-            textBox1.TabIndex = 16;
+            RadiusOut.Font = new Font("Segoe UI", 14F);
+            RadiusOut.Location = new Point(12, 240);
+            RadiusOut.Name = "RadiusOut";
+            RadiusOut.ReadOnly = true;
+            RadiusOut.Size = new Size(150, 45);
+            RadiusOut.TabIndex = 16;
+            RadiusOut.Text = "Radius Out";
             // 
-            // textBox2
+            // DiamaterOut
             // 
-            textBox2.Font = new Font("Segoe UI", 14F);
-            textBox2.Location = new Point(12, 336);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(150, 45);
-            textBox2.TabIndex = 17;
-            textBox2.TextChanged += this.textBox2_TextChanged;
+            DiamaterOut.Font = new Font("Segoe UI", 14F);
+            DiamaterOut.Location = new Point(12, 336);
+            DiamaterOut.Name = "DiamaterOut";
+            DiamaterOut.ReadOnly = true;
+            DiamaterOut.Size = new Size(150, 45);
+            DiamaterOut.TabIndex = 17;
+            DiamaterOut.Text = "Diameter Out";
             // 
-            // textBox3
+            // ApothemOut
             // 
-            textBox3.Font = new Font("Segoe UI", 14F);
-            textBox3.Location = new Point(12, 434);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(150, 45);
-            textBox3.TabIndex = 18;
+            ApothemOut.Font = new Font("Segoe UI", 14F);
+            ApothemOut.Location = new Point(12, 434);
+            ApothemOut.Name = "ApothemOut";
+            ApothemOut.ReadOnly = true;
+            ApothemOut.Size = new Size(150, 45);
+            ApothemOut.TabIndex = 18;
+            ApothemOut.Text = "Apothem Out";
             // 
-            // textBox4
+            // SidesOut
             // 
-            textBox4.Font = new Font("Segoe UI", 14F);
-            textBox4.Location = new Point(186, 240);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(150, 45);
-            textBox4.TabIndex = 19;
+            SidesOut.Font = new Font("Segoe UI", 14F);
+            SidesOut.Location = new Point(186, 240);
+            SidesOut.Name = "SidesOut";
+            SidesOut.ReadOnly = true;
+            SidesOut.Size = new Size(150, 45);
+            SidesOut.TabIndex = 19;
+            SidesOut.Text = "Sides Out";
             // 
-            // textBox5
+            // SideLengthOut
             // 
-            textBox5.Font = new Font("Segoe UI", 14F);
-            textBox5.Location = new Point(186, 336);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(150, 45);
-            textBox5.TabIndex = 20;
+            SideLengthOut.Font = new Font("Segoe UI", 14F);
+            SideLengthOut.Location = new Point(186, 336);
+            SideLengthOut.Name = "SideLengthOut";
+            SideLengthOut.ReadOnly = true;
+            SideLengthOut.Size = new Size(150, 45);
+            SideLengthOut.TabIndex = 20;
+            SideLengthOut.Text = "Side Length Out";
             // 
-            // textBox6
+            // DiagonalsOut
             // 
-            textBox6.Font = new Font("Segoe UI", 14F);
-            textBox6.Location = new Point(186, 434);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(150, 45);
-            textBox6.TabIndex = 21;
+            DiagonalsOut.Font = new Font("Segoe UI", 14F);
+            DiagonalsOut.Location = new Point(186, 434);
+            DiagonalsOut.Name = "DiagonalsOut";
+            DiagonalsOut.ReadOnly = true;
+            DiagonalsOut.Size = new Size(150, 45);
+            DiagonalsOut.TabIndex = 21;
+            DiagonalsOut.Text = "Diagonals Out";
             // 
-            // textBox7
+            // AreaOut
             // 
-            textBox7.Font = new Font("Segoe UI", 14F);
-            textBox7.Location = new Point(361, 240);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(150, 45);
-            textBox7.TabIndex = 22;
+            AreaOut.Font = new Font("Segoe UI", 14F);
+            AreaOut.Location = new Point(361, 240);
+            AreaOut.Name = "AreaOut";
+            AreaOut.ReadOnly = true;
+            AreaOut.Size = new Size(150, 45);
+            AreaOut.TabIndex = 22;
+            AreaOut.Text = "Area Out";
             // 
-            // textBox8
+            // PerimiterOut
             // 
-            textBox8.Font = new Font("Segoe UI", 14F);
-            textBox8.Location = new Point(361, 336);
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(150, 45);
-            textBox8.TabIndex = 23;
+            PerimiterOut.Font = new Font("Segoe UI", 14F);
+            PerimiterOut.Location = new Point(361, 336);
+            PerimiterOut.Name = "PerimiterOut";
+            PerimiterOut.ReadOnly = true;
+            PerimiterOut.Size = new Size(150, 45);
+            PerimiterOut.TabIndex = 23;
+            PerimiterOut.Text = "Perimiter Out";
             // 
-            // textBox9
+            // SegmentOut
             // 
-            textBox9.Font = new Font("Segoe UI", 14F);
-            textBox9.Location = new Point(361, 434);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(150, 45);
-            textBox9.TabIndex = 24;
+            SegmentOut.Font = new Font("Segoe UI", 14F);
+            SegmentOut.Location = new Point(361, 434);
+            SegmentOut.Name = "SegmentOut";
+            SegmentOut.ReadOnly = true;
+            SegmentOut.Size = new Size(150, 45);
+            SegmentOut.TabIndex = 24;
+            SegmentOut.Text = "Segment Out";
             // 
-            // textBox10
+            // InAngleOut
             // 
-            textBox10.Font = new Font("Segoe UI", 14F);
-            textBox10.Location = new Point(538, 240);
-            textBox10.Name = "textBox10";
-            textBox10.ReadOnly = true;
-            textBox10.Size = new Size(150, 45);
-            textBox10.TabIndex = 25;
+            InAngleOut.Font = new Font("Segoe UI", 14F);
+            InAngleOut.Location = new Point(538, 240);
+            InAngleOut.Name = "InAngleOut";
+            InAngleOut.ReadOnly = true;
+            InAngleOut.Size = new Size(150, 45);
+            InAngleOut.TabIndex = 25;
+            InAngleOut.Text = "InAngle Out";
             // 
-            // textBox11
+            // ExAngleOut
             // 
-            textBox11.Font = new Font("Segoe UI", 14F);
-            textBox11.Location = new Point(538, 336);
-            textBox11.Name = "textBox11";
-            textBox11.ReadOnly = true;
-            textBox11.Size = new Size(150, 45);
-            textBox11.TabIndex = 26;
+            ExAngleOut.Font = new Font("Segoe UI", 14F);
+            ExAngleOut.Location = new Point(538, 336);
+            ExAngleOut.Name = "ExAngleOut";
+            ExAngleOut.ReadOnly = true;
+            ExAngleOut.Size = new Size(150, 45);
+            ExAngleOut.TabIndex = 26;
+            ExAngleOut.Text = "ExAngle Out";
             // 
-            // textBox12
+            // InteriorSumOut
             // 
-            textBox12.Font = new Font("Segoe UI", 14F);
-            textBox12.Location = new Point(538, 434);
-            textBox12.Name = "textBox12";
-            textBox12.ReadOnly = true;
-            textBox12.Size = new Size(150, 45);
-            textBox12.TabIndex = 27;
+            InteriorSumOut.Font = new Font("Segoe UI", 14F);
+            InteriorSumOut.Location = new Point(538, 434);
+            InteriorSumOut.Name = "InteriorSumOut";
+            InteriorSumOut.ReadOnly = true;
+            InteriorSumOut.Size = new Size(150, 45);
+            InteriorSumOut.TabIndex = 27;
+            InteriorSumOut.Text = "Interior Sum";
             // 
-            // textBox13
+            // ExteriorSumOut
             // 
-            textBox13.Font = new Font("Segoe UI", 14F);
-            textBox13.Location = new Point(538, 540);
-            textBox13.Name = "textBox13";
-            textBox13.ReadOnly = true;
-            textBox13.Size = new Size(150, 45);
-            textBox13.TabIndex = 28;
+            ExteriorSumOut.Font = new Font("Segoe UI", 14F);
+            ExteriorSumOut.Location = new Point(538, 540);
+            ExteriorSumOut.Name = "ExteriorSumOut";
+            ExteriorSumOut.ReadOnly = true;
+            ExteriorSumOut.Size = new Size(150, 45);
+            ExteriorSumOut.TabIndex = 28;
+            ExteriorSumOut.Text = "Exterior Sum";
             // 
-            // textBox14
+            // CoordinatesOut
             // 
-            textBox14.Font = new Font("Segoe UI", 14F);
-            textBox14.Location = new Point(12, 540);
-            textBox14.Multiline = true;
-            textBox14.Name = "textBox14";
-            textBox14.ReadOnly = true;
-            textBox14.RightToLeft = RightToLeft.Yes;
-            textBox14.ScrollBars = ScrollBars.Vertical;
-            textBox14.Size = new Size(499, 125);
-            textBox14.TabIndex = 29;
-            textBox14.TextChanged += this.textBox14_TextChanged;
+            CoordinatesOut.Font = new Font("Segoe UI", 14F);
+            CoordinatesOut.Location = new Point(12, 540);
+            CoordinatesOut.MaxLength = 10000;
+            CoordinatesOut.Name = "CoordinatesOut";
+            CoordinatesOut.ReadOnly = true;
+            CoordinatesOut.RightToLeft = RightToLeft.Yes;
+            CoordinatesOut.ScrollBars = ScrollBars.Vertical;
+            CoordinatesOut.ShortcutsEnabled = false;
+            CoordinatesOut.Size = new Size(499, 45);
+            CoordinatesOut.TabIndex = 3;
+            CoordinatesOut.Text = "Coordinates Out";
+            CoordinatesOut.TextAlign = HorizontalAlignment.Right;
             // 
-            // label1
+            // DescriptionLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(12, 63);
-            label1.Name = "label1";
-            label1.Size = new Size(611, 32);
-            label1.TabIndex = 30;
-            label1.Text = "The details of the Plygon you have requested are below";
+            DescriptionLabel.AutoSize = true;
+            DescriptionLabel.Font = new Font("Segoe UI", 12F);
+            DescriptionLabel.Location = new Point(12, 63);
+            DescriptionLabel.Name = "DescriptionLabel";
+            DescriptionLabel.Size = new Size(611, 32);
+            DescriptionLabel.TabIndex = 30;
+            DescriptionLabel.Text = "The details of the Plygon you have requested are below";
             // 
             // NameLabel
             // 
@@ -396,6 +401,7 @@
             RegenerateButton.TabIndex = 33;
             RegenerateButton.Text = "Regenerate";
             RegenerateButton.UseVisualStyleBackColor = true;
+            RegenerateButton.Click += RegenerateButton_Click;
             // 
             // PlotCoordsButton
             // 
@@ -406,6 +412,7 @@
             PlotCoordsButton.TabIndex = 34;
             PlotCoordsButton.Text = "Plot Coords";
             PlotCoordsButton.UseVisualStyleBackColor = true;
+            PlotCoordsButton.Click += PlotCoordsButton_Click;
             // 
             // DisplayForm
             // 
@@ -416,21 +423,21 @@
             Controls.Add(RegenerateButton);
             Controls.Add(NameTextBox);
             Controls.Add(NameLabel);
-            Controls.Add(label1);
-            Controls.Add(textBox14);
-            Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(DescriptionLabel);
+            Controls.Add(CoordinatesOut);
+            Controls.Add(ExteriorSumOut);
+            Controls.Add(InteriorSumOut);
+            Controls.Add(ExAngleOut);
+            Controls.Add(InAngleOut);
+            Controls.Add(SegmentOut);
+            Controls.Add(PerimiterOut);
+            Controls.Add(AreaOut);
+            Controls.Add(DiagonalsOut);
+            Controls.Add(SideLengthOut);
+            Controls.Add(SidesOut);
+            Controls.Add(ApothemOut);
+            Controls.Add(DiamaterOut);
+            Controls.Add(RadiusOut);
             Controls.Add(PolygonLabel);
             Controls.Add(CoordinatesLabel);
             Controls.Add(ExteriorAngleSumLabel);
@@ -448,10 +455,17 @@
             Controls.Add(DiamaterLabel);
             Name = "DisplayForm";
             Text = "Polygon Drawer ";
-            Load += this.DisplayForm_Load;
+            Load += DisplayForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
+
+        private void DisplayForm_Load(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        
 
         #endregion
         private Label DiamaterLabel;
@@ -469,21 +483,21 @@
         private Label ExteriorAngleSumLabel;
         private Label CoordinatesLabel;
         private Label PolygonLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private Label label1;
+        private TextBox RadiusOut;
+        private TextBox DiamaterOut;
+        private TextBox ApothemOut;
+        private TextBox SidesOut;
+        private TextBox SideLengthOut;
+        private TextBox DiagonalsOut;
+        private TextBox AreaOut;
+        private TextBox PerimiterOut;
+        private TextBox SegmentOut;
+        private TextBox InAngleOut;
+        private TextBox ExAngleOut;
+        private TextBox InteriorSumOut;
+        private TextBox ExteriorSumOut;
+        private TextBox CoordinatesOut;
+        private Label DescriptionLabel;
         private Label NameLabel;
         private TextBox NameTextBox;
         private Button RegenerateButton;

@@ -1,4 +1,5 @@
-﻿namespace Polygon_Drawing_GUI
+﻿
+namespace Polygon_Drawing_GUI
 {
     partial class InputForm
     {
@@ -61,7 +62,9 @@
             RadiusBox.Name = "RadiusBox";
             RadiusBox.Size = new Size(341, 61);
             RadiusBox.TabIndex = 1;
+            RadiusBox.ThousandsSeparator = true;
             RadiusBox.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            RadiusBox.ValueChanged += RadiusBox_ValueChanged;
             // 
             // GenerateButton
             // 
@@ -72,6 +75,7 @@
             GenerateButton.TabIndex = 2;
             GenerateButton.Text = "Generate";
             GenerateButton.UseVisualStyleBackColor = true;
+            GenerateButton.Click += GenerateButton_Click;
             // 
             // SidesLabel
             // 
@@ -136,6 +140,8 @@
             PerformLayout();
         }
 
+
+
         #endregion
 
         private NumericUpDown SideInput;
@@ -145,5 +151,6 @@
         private Label RadiusLable;
         private PictureBox InfoImage;
         private Label PolygonDrawerLabel;
+
     }
 }

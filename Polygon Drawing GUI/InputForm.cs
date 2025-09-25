@@ -16,5 +16,20 @@ namespace Polygon_Drawing_GUI
         {
 
         }
+
+        private void GenerateButton_Click(object sender, EventArgs e)
+        {
+            Form DisplayForm = new DisplayForm(this, (double)this.RadiusBox.Value, (int)this.SideInput.Value);
+            Console.WriteLine(this.Text);
+
+            DisplayForm.Show();
+            this.Hide();
+
+        }
+
+        private void RadiusBox_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

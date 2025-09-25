@@ -1,3 +1,6 @@
+using System.Security.Cryptography;
+using static Polygon;
+
 namespace Polygon_Drawing_GUI
 {
     internal static class Program
@@ -10,8 +13,13 @@ namespace Polygon_Drawing_GUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new InputForm());
+
+            Form ActiveInputForm = new InputForm();
+
+            Application.Run(ActiveInputForm);
         }
     }
 }

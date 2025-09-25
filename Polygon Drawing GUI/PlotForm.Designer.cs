@@ -30,44 +30,50 @@
         {
             RegenerateButton = new Button();
             DetailsButton = new Button();
-            panel1 = new Panel();
+            PlotBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PlotBox).BeginInit();
             SuspendLayout();
             // 
             // RegenerateButton
             // 
-            RegenerateButton.Location = new Point(31, 614);
+            RegenerateButton.Location = new Point(40, 618);
             RegenerateButton.Name = "RegenerateButton";
             RegenerateButton.Size = new Size(140, 50);
             RegenerateButton.TabIndex = 0;
             RegenerateButton.Text = "Regenerate";
             RegenerateButton.UseVisualStyleBackColor = true;
+            RegenerateButton.Click += RegenerateButton_Click;
             // 
             // DetailsButton
             // 
-            DetailsButton.Location = new Point(177, 614);
+            DetailsButton.Location = new Point(186, 618);
             DetailsButton.Name = "DetailsButton";
             DetailsButton.Size = new Size(140, 50);
             DetailsButton.TabIndex = 1;
             DetailsButton.Text = "Details";
             DetailsButton.UseVisualStyleBackColor = true;
+            DetailsButton.Click += DetailsButton_Click;
             // 
-            // panel1
+            // PlotBox
             // 
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(704, 596);
-            panel1.TabIndex = 2;
+            PlotBox.Location = new Point(40, 12);
+            PlotBox.Name = "PlotBox";
+            PlotBox.Size = new Size(600, 600);
+            PlotBox.TabIndex = 2;
+            PlotBox.TabStop = false;
+            PlotBox.Paint += PlotBox_Draw;
             // 
             // PlotForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(728, 694);
-            Controls.Add(panel1);
+            Controls.Add(PlotBox);
             Controls.Add(DetailsButton);
             Controls.Add(RegenerateButton);
             Name = "PlotForm";
             Text = "PlotForm";
+            ((System.ComponentModel.ISupportInitialize)PlotBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -75,6 +81,6 @@
 
         private Button RegenerateButton;
         private Button DetailsButton;
-        private Panel panel1;
+        private PictureBox PlotBox;
     }
 }
